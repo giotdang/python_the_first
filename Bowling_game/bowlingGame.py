@@ -5,7 +5,8 @@ class bowlingGames:
         self.rollNum=0      #Number of roll
         self.bonusRoll=0    #Number of bonus roll after frame 10
     def rolls(self,pinsFall):
-        self.rollList.append(pinsFall)
+        if(pinsFall<=10):
+            self.rollList.append(pinsFall)
         # When number of frame is less than 10, increase number of frame by 1
         # after 1 roll if it is a strike roll, after 2 rolls if it is a spare or a normal roll
         # When number of frame reaches 10, stop increasing number of frame 
